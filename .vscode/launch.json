@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-LoginApplication<Login>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "Org.Utl.Idgs.Login.LoginApplication",
+            "projectName": "Login",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

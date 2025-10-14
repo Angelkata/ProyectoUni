@@ -12,7 +12,6 @@ public class UsuarioService {
     private UsuarioDao usuarioDao;
 
     public void registrar(Usuario usuario) {
-        // Guardar la contraseña tal cual fue proporcionada (texto plano) según requerimiento
         usuarioDao.save(usuario);
     }
 }

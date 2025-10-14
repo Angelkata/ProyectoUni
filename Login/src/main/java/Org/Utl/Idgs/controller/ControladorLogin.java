@@ -15,4 +15,10 @@ public class ControladorLogin {
     public String principal() {
         return "principal";
     }
+
+
+        @GetMapping("/Usuario")
+    public String Usuario() {
+        return "Usuario";
+    }
 }

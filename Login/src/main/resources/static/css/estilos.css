@@ -1,11 +1,11 @@
 /* Estilos básicos para la página de inicio de sesión */
 :root {
-  --bg: #f5f7fb;
+  --bg: #2b2c2e;
   --card: #ffffff;
   --text: #1f2937;
   --muted: #6b7280;
-  --primary: #2563eb;
-  --primary-600: #1d4ed8;
+  --primary: #e0121d;
+  --primary-600: #d60808;
   --error: #dc2626;
   --border: #e5e7eb;
 }

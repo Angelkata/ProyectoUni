@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Usuario</title>
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center">Registrar Nuevo Usuario</h2>
+                </div>
+                <div class="card-body">
+                    <form th:action="@{/registro}" th:object="${usuario}" method="post">
+                        <div class="mb-3">
+                            <label for="nombreUsuario" class="form-label">Nombre de Usuario:</label>
+                            <input type="text" id="nombreUsuario" class="form-control" th:field="*{nombreUsuario}" required autofocus>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="contrasena" class="form-label">Contraseña:</label>
+                            <input type="password" id="contrasena" class="form-control" th:field="*{contrasena}" required>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Registrar Un nuevo Usuarioo</button>
+                        </div>
+                    </form>
+                    <br>
+                    <div class="text-center">
+                        <span>Hola Inicia sesion <a th:href="@{/inicio-sesion}">Inicia Sesion Weon</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

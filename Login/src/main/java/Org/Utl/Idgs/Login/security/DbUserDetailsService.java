@@ -1,5 +1,7 @@
 package Org.Utl.Idgs.Login.security;
 
+import  Org.Utl.Idgs.Login.Service.UsuarioService;
+
 import java.util.Collections;
 
 import org.springframework.security.core.userdetails.User;
@@ -23,9 +25,8 @@ public class DbUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Usuario usuario = usuarioRepository.findByNombreUsuario(username)
-            .orElseThrow(() -> new UsernameNotFoundException("Usuario no encontrado: " + username));
+            .orElseThrow(() -> new UsernameNotFoundException("No existe tu usuario :/, F : " + username));
 
-        // Sin roles/permisos adicionales; se pueden agregar GrantedAuthority si los hay
         return User.withUsername(usuario.getNombreUsuario())
                 .password(usuario.getContrasena())
                 .authorities(Collections.emptyList())

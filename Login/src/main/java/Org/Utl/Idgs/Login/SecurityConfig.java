@@ -18,6 +18,9 @@ public class SecurityConfig {
         this.userDetailsService = userDetailsService;
     }
 
+
+    
+
     @Bean
     public SecurityFilterChain filtroSeguridad(HttpSecurity http) throws Exception {
         http
@@ -42,8 +45,7 @@ public class SecurityConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        // ATENCIÓN: Para pruebas iniciales usa contraseñas en texto plano.
-        // Recomendado migrar a BCrypt y cambiar a: new BCryptPasswordEncoder()
+      
         return org.springframework.security.crypto.password.NoOpPasswordEncoder.getInstance();
     }
 
@@ -51,4 +53,7 @@ public class SecurityConfig {
     public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
         return configuration.getAuthenticationManager();
     }
+
+
+
 }
